@@ -11,4 +11,22 @@ $router->add(
     ]
 );
 
+$router->add(
+    '/sasstutorial',
+    [
+        'controller' => 'Signup',
+        'action'     => 'sasstutorial',
+    ]
+);
+
+$router->add(
+    '/tailwindtutorial',
+    [
+        'controller' => 'Signup',
+        'action'     => 'tailwindtutorial',
+    ]
+);
+
 $router->handle($_SERVER['REQUEST_URI']);
+
+

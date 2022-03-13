@@ -1,0 +1,42 @@
+<!-- colors -->
+
+<!-- font sizes -->
+
+<!-- buttons -->
+
+<!-- cards -->
+<h2 >Cards</h2>
+<div class="card">
+    <h1 class="card-title"> This is a card title </h1>
+    <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga qui error esse obcaecati cum. <a href="#">Modi ullam</a> cupiditate repellendus nemo ipsum!</p>
+
+</div>
+<!-- grid system -->
+
+<!-- utilities -->
+<?php
+if (count($users) > 0) {
+    ?>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td colspan="3">Users quantity: <?php echo count($users); ?></td>
+        </tr>
+        </tfoot>
+        <tbody>
+        <?php foreach ($users as $key => $value) { ?>
+            <tr>
+                <td><?php echo $value; ?></td>
+            </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+
+    <?php } ?>
