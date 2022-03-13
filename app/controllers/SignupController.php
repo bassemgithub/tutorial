@@ -4,6 +4,18 @@ use Phalcon\Mvc\Controller;
 
 class SignupController extends Controller
 {
+    public function tailwindtutorialAction()
+    {
+            
+    }
+    public function sasstutorialAction()
+    {
+        $array = array(
+            "foo" => "bar",
+            "bar" => "foo",
+        );
+        $this->view->users = $array; 
+    }
     public function testAction()
     {
 

@@ -3,6 +3,12 @@ declare(strict_types=1);
 
 use Phalcon\Di\FactoryDefault;
 
+use \Phalcon\Debug;
+
+$debug = new Debug();
+
+$debug->listen();
+
 error_reporting(E_ALL);
 
 define('BASE_PATH', dirname(__DIR__));
@@ -39,7 +45,12 @@ try {
      * Handle the request
      */
     $application = new \Phalcon\Mvc\Application($di);
-
+    /*
+    echo "<pre>";
+    print_r($_SERVER);
+    echo "</pre>";
+    exit();
+    */
     echo $application->handle($_SERVER['REQUEST_URI'])->getContent();
 } catch (\Exception $e) {
     echo $e->getMessage() . '<br>';
